@@ -2,7 +2,9 @@
   "name": "create-extractor-component",
   "version": "1.0.0",
   "description": "Create Extractor Component",
-  "main": "index.js",
+  "bin": {
+    "create-extractor-container": "main"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
