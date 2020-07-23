@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/haku-noir/create-extractor-component/issues"
   },
-  "homepage": "https://github.com/haku-noir/create-extractor-component#readme"
+  "homepage": "https://github.com/haku-noir/create-extractor-component#readme",
+  "dependencies": {
+    "commander": "^6.0.0",
+    "fs-extra": "^9.0.1"
+  }
 }
