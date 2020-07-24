@@ -1,2 +1,7 @@
 # create-extractor-component
-Create Extractor Component
+Create React&Redux-Extractor-Component
+
+# How to use
+```
+npx create-extractor-component <extractor_component_name>
+```
