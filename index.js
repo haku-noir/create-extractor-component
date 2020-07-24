@@ -9,12 +9,20 @@ const getSrcDir = dir => {
   return srcDir;
 };
 
-module.exports = () => {
+const getHeadUpper = str => str.slice(0, 1).toUpperCase() + str.slice(1);
+
+module.exports = (name) => {
   const srcDir = getSrcDir(process.cwd());
+
+  if(!name){
+    console.log('<extractor_component_name> is required\n');
+    process.exit();
+  }
+  const XXX = getHeadUpper(name);
 
   Promise.resolve()
     .then(() => console.log('create-extractor-component'))
-    .then(() => console.log(srcDir))
+    .then(() => console.log(srcDir, XXX))
     .catch(err => {
       console.log('Fail!');
       console.error(err)

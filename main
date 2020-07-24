@@ -8,4 +8,4 @@ program
   .version(require(`${__dirname}/package.json`).version, '-v, --version')
   .parse(process.argv);
 
-require(".")();
+require(".")(program.args[0]);
