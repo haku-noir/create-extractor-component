@@ -4,7 +4,9 @@
 const program = require('commander');
 
 program
+  .name('create-extractor-component')
   .usage('<extractor_component_name>')
+  .description('create a React & Redux extractor component')
   .version(require(`${__dirname}/package.json`).version, '-v, --version')
   .parse(process.argv);
 
