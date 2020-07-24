@@ -1,3 +1,5 @@
+const fs = require('fs-extra');
+
 const getSrcDir = dir => {
   let srcDir = `${dir}/src`;
 
@@ -21,8 +23,13 @@ module.exports = (name) => {
   const XXX = getHeadUpper(name);
 
   Promise.resolve()
-    .then(() => console.log('create-extractor-component'))
-    .then(() => console.log(srcDir, XXX))
+    .then(() => (
+      fs.readFile(`${__dirname}/hooks/hooksExtractor.tsx`, 'utf8')
+    ))
+    .then(data => {
+      const replacedData = data.replace(/XXX/g, XXX);
+      return fs.outputFile(`${srcDir}/extractor/${XXX}Extractor.tsx`, replacedData);
+    })
     .catch(err => {
       console.log('Fail!');
       console.error(err)
