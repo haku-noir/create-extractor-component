@@ -1,6 +1,6 @@
 {
   "name": "create-extractor-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create Extractor Component",
   "bin": {
     "create-extractor-container": "main"
